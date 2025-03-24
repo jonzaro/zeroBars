@@ -1,21 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import  LogoSVGUrl  from '../assets/AnimatedLogoVid.mp4'
 
 export const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <div className="relative h-screen">
-        <img
-          src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80"
+            <img
+          src="src/assets/HeroImg.png"
           alt="Hero"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">ZERO BARS OUTPOST</h1>
-            <p className="text-xl mb-8">Technical gear for urban exploration</p>
+          <div className="text-center text-white mb-80 ">
+          <video 
+          src={LogoSVGUrl} 
+          autoPlay 
+          muted 
+          playsInline 
+        />   <br></br>         
+        <p className="text-xl mb-8">Technical gear for urban exploration</p>
             <Link
               to="/products"
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-black transition-colors"
