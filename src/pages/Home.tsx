@@ -2,17 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import LogoSVGUrl from "../assets/AnimatedLogoVid.mp4";
+import HeroImg from "../assets/HeroImg.png";
 
 export const Home: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <div className="relative h-screen">
-        <img
-          src="src/assets/HeroImg.png"
-          alt="Hero"
-          className="w-full h-full object-cover"
-        />
+        <img src={HeroImg} alt="Hero" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white mb-80 ">
             <video src={LogoSVGUrl} autoPlay muted playsInline /> <br></br>
