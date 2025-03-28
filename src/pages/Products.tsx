@@ -1,6 +1,6 @@
-import React from 'react';
-import { ProductCard } from '../components/ProductCard';
-import { products } from '../data/products';
+import React from "react";
+import { ProductCard } from "../components/ProductCard";
+import { products } from "../data/products";
 
 export const Products: React.FC = () => {
   return (
