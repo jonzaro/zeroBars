@@ -36,24 +36,38 @@ const reviews: Review[] = [
 
 const Reviews: React.FC = () => {
   return (
-    <div className="grid grid-cols-3 gap-4 p-4">
-      {reviews.map((review) => (
-        <div
-          key={review.id}
-          className="bg-white shadow-md rounded-lg p-4 border border-gray-200 transition-transform duration-300 ease-in-out hover:scale-105"
-        >
-          <h3 className="text-lg font-semibold mb-2">{review.name}</h3>
-          <p className="text-gray-600 text-sm mb-4">{review.reviewText}</p>
-          <div className="text-yellow-500 font-medium">
-            {"⭐".repeat(review.rating)}{" "}
-            <span className="text-gray-500">({review.rating}/5)</span>
+    <div className="container mx-auto">
+      <div className="flex flex-col md:flex-row flex-wrap gap-6 p-4 justify-center">
+        {reviews.map((review) => (
+          <div
+            key={review.id}
+            className="bg-white shadow-md rounded-lg p-4 border border-gray-200 transition-transform duration-300 ease-in-out hover:scale-105 w-full md:w-[calc(33%-1rem)] flex-grow"
+          >
+            <h3 className="text-lg font-semibold mb-2">{review.name}</h3>
+            <p className="text-gray-600 text-sm mb-4">{review.reviewText}</p>
+            <div className="text-yellow-500 font-medium">
+              {"⭐".repeat(review.rating)}{" "}
+              <span className="text-gray-500">({review.rating}/5)</span>
+            </div>
           </div>
+        ))}
+        <div className="col-span-3 mt-4 flex flex-wrap justify-between items-center w-full max-w-xl mx-auto px-4 gap-2">
+          <img
+            src={McAfeeImg}
+            alt="McAfee SECURE"
+            className="h-20 max-w-[30%] w-auto object-contain sm:max-w-none"
+          />
+          <img
+            src={StripeImg}
+            alt="Powered by Stripe"
+            className="h-10 max-w-[30%] w-auto object-contain sm:max-w-none"
+          />
+          <img
+            src={TrustImg}
+            alt="Trustpilot 5* Website"
+            className="h-12 max-w-[30%] w-auto object-contain sm:max-w-none"
+          />
         </div>
-      ))}
-      <div className="col-span-3 mt-4 flex justify-between items-center w-full max-w-xl mx-auto px-4">
-        <img src={McAfeeImg} alt="McAfee SECURE" className="h-20" />
-        <img src={StripeImg} alt="Powered by Stripe" className="h-10" />
-        <img src={TrustImg} alt="Trustpilot 5* Website" className="h-12" />
       </div>
     </div>
   );

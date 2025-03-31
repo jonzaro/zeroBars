@@ -14,9 +14,11 @@ export const Home: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-white w-full p-4 overflow-hidden relative">
         <div
-          className="whitespace-nowrap inline-block"
+          className="whitespace-nowrap w-full"
           style={{
-            animation: "scroll-left 30s linear infinite",
+            animation: "scroll-left 20s linear infinite",
+            maxWidth: "100%",
+            display: "block",
           }}
         >
           <style>
@@ -31,11 +33,11 @@ export const Home: React.FC = () => {
         }
         `}
           </style>
-          <span className="text-xl inline">🚨🚨🚨</span>{" "}
+          <span className="text-xl inline">⚠️⚠️⚠️</span>{" "}
           <span className="text-sm inline text-gray-800">
-            [!!] TRANSMISSION:0324205v1 [!!]... ** DON'T MISS OUT ** EXCLUSIVE
-            MONTHLY DROPS INITIATED... [ * ] DARK MODE LOADOUTS * COMING SOON! *
-            STAY TUNED * <span className="text-xl inline">🚨🚨🚨</span>
+            [!!] TRANSMISSION:0324205v1 [!!]... **** EXCLUSIVE MONTHLY DROPS
+            INITIATED... [ * ] DARK MODE LOADOUTS * COMING SOON! * STAY TUNED *{" "}
+            <span className="text-xl inline">⚠️⚠️⚠️</span>
             <Link to="/subscribe" className="text-gray-500 underline ml-2">
               SUBSCRIBE TO BE UPDATED{" "}
             </Link>
@@ -46,15 +48,14 @@ export const Home: React.FC = () => {
         <img src={MapImg} alt="Hero" className="w-full h-full object-cover " />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
           <div className="text-center text-white rounded-lg overflow-hidden max-w-3xl mx-auto mt-[-100px]">
-            <div className="flex justify-center mt-4 mb-10 max-w-5xl w-full mx-auto">
-              {" "}
+            <div className="flex justify-center mt-2 mb-10 w-auto mx-auto px-4 lg:w-1/2">
               <video
                 src={LogoVid}
                 autoPlay
                 muted
                 playsInline
-                style={{ height: "250px", opacity: 0.9 }}
-                className="transform -translate-y-10 rounded-lg w-full object-cover"
+                className="transform mb-10 rounded-lg w-full max-w-5xl object-cover h-auto opacity-90"
+                style={{ maxWidth: "100vw" }}
               />
             </div>
             <div className="flex justify-center mt-[-50px]">
