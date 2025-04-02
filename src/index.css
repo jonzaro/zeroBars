@@ -13,3 +13,24 @@
     @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500;
   }
 }
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("/src/assets/font/Coolvetica\ Rg.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyCustomFont2";
+  src: url("src/assets/font/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyCustomFont3";
+  src: url("src/assets/font/Abel-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

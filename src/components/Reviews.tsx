@@ -36,7 +36,7 @@ const reviews: Review[] = [
 
 const Reviews: React.FC = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto ">
       <div className="flex flex-col md:flex-row flex-wrap gap-6 p-4 justify-center">
         {reviews.map((review) => (
           <div

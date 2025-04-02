@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import LogoVid from "../assets/AnimatedLogoVid.mp4";
 import MapImg from "../assets/MapGunBW.jpeg";
 import Footer from "../components/Footer";
 import Reviews from "../components/Reviews";
-import BackpackModel from "../assets/Backpack.jpg";
-// import BigFont from "../assets/Coolvetica Font/Coolvetica Rg It.otf";
+import Timeline from "../components/Timeline";
+import { ArrowRight } from "lucide-react";
 
 export const Home: React.FC = () => {
   return (
@@ -46,65 +45,58 @@ export const Home: React.FC = () => {
       </div>
       <div className="relative h-screen">
         <img src={MapImg} alt="Hero" className="w-full h-full object-cover " />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center">
-          <div className="text-center text-white rounded-lg overflow-hidden max-w-3xl mx-auto mt-[-100px]">
-            <div className="flex justify-center mt-2 mb-10 w-auto mx-auto px-4 lg:w-1/2">
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col overflow-hidden">
+          <div className="rounded-lg overflow-hidden mx-auto w-full flex-shrink-0">
+            <div className="mt-2 mb-6 w-auto mx-auto px-4 lg:w-4/5 flex justify-center">
               <video
                 src={LogoVid}
                 autoPlay
                 muted
                 playsInline
-                className="transform mb-10 rounded-lg w-full max-w-5xl object-cover h-auto opacity-90"
-                style={{ maxWidth: "100vw" }}
+                className="transform rounded-lg max-w-5xl object-cover w-full h-auto opacity-90"
+                style={{
+                  maxWidth: "50vw",
+                  zIndex: 10,
+                  position: "relative",
+                }}
               />
             </div>
-            <div className="flex justify-center mt-[-50px]">
-              <div className="bg-white bg-opacity-90 flex flex-col md:flex-row rounded-lg shadow-lg max-w-5xl w-full">
-                {/* Left side - Image */}
-                <div className="w-full md:w-1/2">
-                  <img
-                    src={BackpackModel}
-                    alt="Hero"
-                    className="w-full h-full rounded-l-lg object-cover"
-                  />
-                </div>
-
-                {/* Right side - Text content */}
-                <div className="w-full md:w-1/2 p-6 flex flex-col justify-center">
-                  <p
-                    style={{
-                      fontFamily: "BigFont, Coolvetica Hv Comp",
-                    }}
-                    className="text-2xl font-medium text-gray-800 mb-6 text-center"
-                  >
-                    No Signal. No Limits.
-                  </p>
-                  <p className="text-md font-medium text-gray-800 mb-6 text-center">
-                    Your everyday grind demands gear that keeps up. Our tactical
-                    bags are built for action—tough, versatile, and ready for
-                    anything life throws your way. Pack it, strap it, own
-                    it—because staying ready isn't a choice, it's a mindset.
-                  </p>
-                  <div className="flex justify-center">
-                    <Link
-                      to="/products"
-                      className="inline-flex items-center px-6 py-3 bg-white text-black border-black border-2 rounded-md hover:bg-gray-300 transition-colors"
-                      style={{ width: "auto" }}
-                    >
-                      Shop Now <ArrowRight className="ml-2" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
+          <div
+            className="bg-white font-custom2 p-5 rounded-md opacity-90 mb-6 text-center flex flex-col items-center mx-auto text-sm sm:text-base lg:text-lg"
+            style={{
+              width: "30%",
+            }}
+          >
+            No Signal. No Limits.
+            <Link
+              to="/products"
+              className="inline-flex items-center px-6 py-2 bg-gray-100 text-black border-black border-2 rounded-md hover:bg-gray-800 hover:text-white transition-colors mt-2"
+              style={{ width: "auto" }}
+            >
+              Shop Now <ArrowRight className="ml-2" />
+            </Link>
+          </div>
+          <div
+            className="flex-1 overflow-auto pb-4 scrollbar-hide"
+            style={{
+              scrollbarWidth: "none" /* Firefox */,
+              msOverflowStyle: "none" /* IE and Edge */,
+            }}
+          >
+            <style>{`
+              .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+              }
+            `}</style>
+            <Timeline />
           </div>
         </div>
       </div>
 
       {/* Featured Section */}
-      <div className="max-w-7xl mx-auto px-4">
-        <Reviews />
-      </div>
+      <Reviews />
+
       <Footer />
     </div>
   );

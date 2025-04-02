@@ -1,55 +1,50 @@
-import { Product } from '../types';
+import { Product } from "../types";
 
 export const products: Product[] = [
   {
-    id: 'tactical-backpack',
-    name: 'ZB-1 Tactical Backpack',
-    price: 189.99,
-    description: 'Urban-ready tactical backpack with modular storage system and weatherproof construction.',
-    images: [
-      'https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80'
-    ],
+    id: "pack",
+    name: "Off-Grid Pack",
+    price: 110,
+    description:
+      "Urban-ready tactical backpack with modular storage system and weatherproof construction.",
+    images: ["src/assets/TacBag.jpg", "src/assets/TacBag.jpg"],
     features: [
-      'Weatherproof 1000D Cordura construction',
-      'Modular attachment system',
-      'Quick-access compartments',
+      "Weatherproof 1000D Cordura construction",
+      "Modular attachment system",
+      "Quick-access compartments",
       'Padded laptop sleeve (up to 15")',
-      'YKK AquaGuard zippers'
-    ]
+      "YKK AquaGuard zippers",
+    ],
+  },
+
+  {
+    id: "fanny",
+    name: "Blackout Fanny",
+    price: 40,
+    description:
+      "Technical waist pack with expandable storage and multi-wear options.",
+    images: ["src/assets/Fanny.jpg", "src/assets/Fanny.jpg"],
+    features: [
+      "Cross-body or waist wear options",
+      "Expandable main compartment",
+      "Quick-release buckle system",
+      "Hidden security pocket",
+      "Reflective details",
+    ],
   },
   {
-    id: 'messenger-bag',
-    name: 'ZB-2 Messenger Bag',
-    price: 159.99,
-    description: 'Versatile messenger bag with MOLLE system and convertible strap design.',
-    images: [
-      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80'
-    ],
+    id: "sling-bag",
+    name: "Onyx Sling ",
+    price: 65,
+    description:
+      "Versatile messenger bag with MOLLE system and convertible strap design.",
+    images: ["src/assets/Sling.jpg", "src/assets/Sling.jpg"],
     features: [
-      'Ambidextrous strap system',
-      'MOLLE/PALS attachment points',
-      'Water-resistant coating',
-      'Internal organization',
-      'Reinforced carrying handle'
-    ]
+      "Ambidextrous strap system",
+      "MOLLE/PALS attachment points",
+      "Water-resistant coating",
+      "Internal organization",
+      "Reinforced carrying handle",
+    ],
   },
-  {
-    id: 'waist-pack',
-    name: 'ZB-3 Waist Pack',
-    price: 129.99,
-    description: 'Technical waist pack with expandable storage and multi-wear options.',
-    images: [
-      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&q=80'
-    ],
-    features: [
-      'Cross-body or waist wear options',
-      'Expandable main compartment',
-      'Quick-release buckle system',
-      'Hidden security pocket',
-      'Reflective details'
-    ]
-  }
 ];
