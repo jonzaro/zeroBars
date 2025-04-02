@@ -42,7 +42,7 @@ export default function Timeline() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            <div className="w-full md:w-1/3 text-center md:text-right pr-0 md:pr-4 mb-2 md:mb-0">
+            <div className="w-full rounded-md md:w-1/3 text-center md:text-right pr-0 md:pr-4 mb-2 md:mb-0 p-3">
               <p className="text-gray-500 text-xs sm:text-xs font-bold transform -translate-x-1/3">
                 {item.date}
               </p>
@@ -69,7 +69,7 @@ export default function Timeline() {
                 <img
                   src={item.img}
                   alt={`${item.title} image`}
-                  className="mt-2 rounded-lg max-w-[25vw] w-full"
+                  className="mt-2 max-md:1/ rounded-lg "
                 />
               )}
             </motion.div>
