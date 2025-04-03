@@ -30,7 +30,7 @@ const timelineData = [
 
 export default function Timeline() {
   return (
-    <div className="flex justify-center py-3 px-4 rounded-3xl w-auto mx-auto max-w-4x opacity-90 bg-gray-200 relative">
+    <div className="flex justify-center py-3 px-4 rounded-3xl w-full md:w-auto mx-auto max-w-4xl opacity-90 bg-gray-200 relative">
       <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-white rounded-full"></div>
 
       <div className="flex flex-col items-center opacity-100 space-y-10 w-2/3 relative max-w-full">
@@ -42,16 +42,16 @@ export default function Timeline() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            <div className="w-full rounded-md md:w-1/3 text-center md:text-right pr-0 md:pr-4 mb-2 md:mb-0 p-3">
-              <p className="text-gray-500 text-xs sm:text-xs font-bold transform -translate-x-1/3">
+            <div className="w-full rounded-md md:w-1/3 sm:text-xl text-center md:text-right pr-0 md:pr-4 mb-2 md:mb-0 p-3">
+              <p className="text-gray-500 text-xs sm:text-lg font-bold transform -translate-x-1/3">
                 {item.date}
               </p>
-              <p className="text-gray-400 text-xs sm:text-xs transform -translate-x-1/3">
+              <p className="text-gray-400 text-xs sm:text-md transform -translate-x-1/3">
                 {item.time}
               </p>
             </div>
             <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center z-10 my-2 md:my-0">
-              <FaCrosshairs className="text-black text-xs" />
+              <FaCrosshairs className="text-black text-md" />
             </div>
             <motion.div
               className="w-full md:w-2/3 bg-white p-3 sm:p-4 rounded-xl shadow-lg md:ml-4 mt-2 md:mt-0"
@@ -59,10 +59,10 @@ export default function Timeline() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}
             >
-              <p className="font-bold font-custom2 text-sm sm:text-base lg:text-lg">
+              <p className="font-bold font-custom2 text-xl lg:text-lg">
                 {item.title}
               </p>
-              <p className="text-gray-700 font-semibold font-custom3 text-xs sm:text-sm lg:text-base">
+              <p className="text-gray-700 font-semibold font-custom3 text-xl lg:text-sm">
                 {item.content}
               </p>
               {item.img && (
