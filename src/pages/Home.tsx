@@ -78,7 +78,7 @@ export const Home: React.FC = () => {
             </Link>
           </div>
           <div
-            className="flex-1 overflow-auto pb-4 scrollbar-hide"
+            className="flex-1 overflow-auto pb-4 scrollbar-hide md:pb-4 sm:max-h-[calc(100vh-400px)] max-h-[calc(100vh-300px)]"
             style={{
               scrollbarWidth: "none" /* Firefox */,
               msOverflowStyle: "none" /* IE and Edge */,
@@ -86,7 +86,13 @@ export const Home: React.FC = () => {
           >
             <style>{`
               .scrollbar-hide::-webkit-scrollbar {
-          display: none;
+              display: none;
+              }
+              @media (max-width: 640px) {
+              .timeline-container {
+                height: auto;
+                flex: 1;
+              }
               }
             `}</style>
             <Timeline />
