@@ -1,3 +1,6 @@
+import TacBagImage from "../assets/TacBag.jpg";
+import FannyImage from "../assets/Fanny.jpg";
+import SlingImage from "../assets/Sling.jpg";
 import { Product } from "../types";
 
 export const products: Product[] = [
@@ -7,7 +10,7 @@ export const products: Product[] = [
     price: 110,
     description:
       "Urban-ready tactical backpack with modular storage system and weatherproof construction.",
-    images: ["src/assets/TacBag.jpg", "src/assets/TacBag.jpg"],
+    images: [TacBagImage, TacBagImage],
     features: [
       "Weatherproof 1000D Cordura construction",
       "Modular attachment system",
@@ -23,7 +26,7 @@ export const products: Product[] = [
     price: 40,
     description:
       "Technical waist pack with expandable storage and multi-wear options.",
-    images: ["src/assets/Fanny.jpg", "src/assets/Fanny.jpg"],
+    images: [FannyImage, FannyImage],
     features: [
       "Cross-body or waist wear options",
       "Expandable main compartment",
@@ -38,7 +41,7 @@ export const products: Product[] = [
     price: 65,
     description:
       "Versatile messenger bag with MOLLE system and convertible strap design.",
-    images: ["src/assets/Sling.jpg", "src/assets/Sling.jpg"],
+    images: [SlingImage, SlingImage],
     features: [
       "Ambidextrous strap system",
       "MOLLE/PALS attachment points",

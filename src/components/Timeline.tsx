@@ -1,12 +1,14 @@
 import { FaCrosshairs } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Sling2 from "../assets/Sling2.jpg";
+import Backpack from "../assets/Backpack.jpg";
 
 const timelineData = [
   {
     date: "00293092 TRANSMISSION –",
     time: "03:49 PM",
     title: "COMMENT #03",
-    img: "src/assets/Sling2.jpg",
+    img: Sling2,
 
     content:
       " Your everyday grind demands gear that keeps up. Our tactical bags are built for action—tough, versatile, and ready for                     anything life throws your way. Pack it, strap it, own        it—because staying ready isn't a choice, it's a mindset.",
@@ -15,7 +17,7 @@ const timelineData = [
     date: "LOGSTAT // 020930Z // RESTRICTED",
     time: "09:23 AM",
     title: "SUMMERY #02",
-    img: "src/assets/Backpack.jpg",
+    img: Backpack,
     content:
       "The best animation, the best tutorials you would ever see here only. You can learn how to animate and how to use SVG. Even else you can add your own animations.",
   },
@@ -30,7 +32,7 @@ const timelineData = [
 
 export default function Timeline() {
   return (
-    <div className="flex justify-center py-3 px-4 rounded-3xl w-full md:w-auto mx-auto max-w-4xl opacity-90 bg-gray-200 relative">
+    <div className="flex justify-center py-3 px-4 rounded-xl w-full md:w-auto mx-auto max-w-4xl opacity-90 bg-gray-200 relative">
       <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-white rounded-full"></div>
 
       <div className="flex flex-col items-center opacity-100 space-y-10 w-2/3 relative max-w-full">
