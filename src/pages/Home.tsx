@@ -62,19 +62,23 @@ export const Home: React.FC = () => {
               />
             </div>
           </div>
-          <div
-            className="bg-white font-custom2 p-5 rounded-md opacity-90 mb-6 text-center flex flex-col items-center mx-auto text-sm sm:text-base lg:text-lg"
-            style={{
-              width: "30%",
-            }}
-          >
-            No Signal. No Limits.
+          <div className="backdrop-blur-md bg-white font-custom2 p-6 rounded-lg shadow-2xl mb-8 text-center flex flex-col items-center mx-auto max-w-md w-full sm:w-4/5 md:w-3/5 lg:w-2/5">
+            <h2 className="text-black text-xl sm:text-2xl lg:text-3xl font-bold mb-3">
+              No Signal. No Limits.
+            </h2>
+            <p className="text-black text-sm sm:text-base mb-4 opacity-80">
+              From EDC to weekend ops, these bags are your go-anywhere,
+              carry-everything solution. Urban tested, wilderness proven.
+            </p>
             <Link
               to="/products"
-              className="inline-flex items-center px-6 py-2 bg-gray-100 text-black border-black border-2 rounded-md hover:bg-gray-800 hover:text-white transition-colors mt-2"
-              style={{ width: "auto" }}
+              className="group relative inline-flex items-center justify-center px-8 py-3 bg-white text-black font-medium rounded-md overflow-hidden transition-all duration-300 hover:bg-gray-900 hover:text-white"
             >
-              Shop Now <ArrowRight className="ml-2" />
+              <span className="relative z-10 flex items-center">
+                Shop Now{" "}
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <span className="absolute bottom-0 left-0 w-0 h-1 bg-gray-600 group-hover:w-full transition-all duration-300"></span>
             </Link>
           </div>
           <div

@@ -11,7 +11,7 @@ const timelineData = [
     img: Sling2,
 
     content:
-      " Your everyday grind demands gear that keeps up. Our tactical bags are built for action—tough, versatile, and ready for                     anything life throws your way. Pack it, strap it, own        it—because staying ready isn't a choice, it's a mindset.",
+      "Our urban sling blends modular storage, stealth access, and a low-vis profile built for the modern grid.",
   },
   {
     date: "LOGSTAT // 020930Z // RESTRICTED",
@@ -19,23 +19,23 @@ const timelineData = [
     title: "SUMMERY #02",
     img: Backpack,
     content:
-      "The best animation, the best tutorials you would ever see here only. You can learn how to animate and how to use SVG. Even else you can add your own animations.",
+      "Our largest bag is here — built for long hauls, big days, and everything in between. It’s available now, ready to move when you are.",
   },
   {
     date: "REDCON 1 // 300500Z MAR 25 –",
     time: "08:30 PM",
     title: "COMMENT #04",
     content:
-      "The best animation, the best tutorials you would ever see. What about canvas?? Do you like it?",
+      "Welcome to Zero Bars Outpost — where the mission starts when the signal dies. We build carry systems for those who move with intent: urban operators, off-grid explorers, and anyone who lives prepared. No flash, no compromise — just rugged gear built for real-world scenarios.",
   },
 ];
 
 export default function Timeline() {
   return (
-    <div className="flex justify-center py-3 px-4 rounded-xl w-full md:w-auto mx-auto max-w-4xl opacity-90 bg-gray-200 relative">
+    <div className="flex justify-center py-3 px-4 rounded-xl w-full md:w-auto mx-auto max-w-4xl bg-gray-200/90 relative">
       <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-white rounded-full"></div>
 
-      <div className="flex flex-col items-center opacity-100 space-y-10 w-2/3 relative max-w-full">
+      <div className="flex flex-col items-center space-y-10 w-2/3 relative max-w-full">
         {timelineData.map((item, index) => (
           <motion.div
             key={index}
@@ -68,11 +68,14 @@ export default function Timeline() {
                 {item.content}
               </p>
               {item.img && (
-                <img
-                  src={item.img}
-                  alt={`${item.title} image`}
-                  className="mt-2 max-md:1/ rounded-lg "
-                />
+                <div className="mt-2">
+                  <img
+                    src={item.img}
+                    alt={`${item.title} image`}
+                    className="rounded-lg w-full opacity-100"
+                    style={{ opacity: 1 }}
+                  />
+                </div>
               )}
             </motion.div>
           </motion.div>
