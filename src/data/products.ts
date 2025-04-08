@@ -8,6 +8,7 @@ export const products: Product[] = [
     id: "pack",
     name: "Off-Grid Pack",
     price: 110,
+    pmntLink: "https://buy.stripe.com/dR66oNcUvay68RacMO",
     description:
       "Urban-ready tactical backpack with modular storage system and weatherproof construction.",
     images: [TacBagImage, TacBagImage],
@@ -24,6 +25,7 @@ export const products: Product[] = [
     id: "fanny",
     name: "Blackout Fanny",
     price: 40,
+    pmntLink: "https://buy.stripe.com/cN2dRf1bN21AgjC4gg",
     description:
       "Technical waist pack with expandable storage and multi-wear options.",
     images: [FannyImage, FannyImage],
@@ -39,6 +41,7 @@ export const products: Product[] = [
     id: "sling-bag",
     name: "Onyx Sling ",
     price: 65,
+    pmntLink: "https://buy.stripe.com/aEU3cB6w75dM8Ra145",
     description:
       "Versatile messenger bag with MOLLE system and convertible strap design.",
     images: [SlingImage, SlingImage],

@@ -1,13 +1,13 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { products } from '../data/products';
-import { useCartStore } from '../store/cartStore';
-import { Plus, Minus } from 'lucide-react';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { products } from "../data/products";
+import { useCartStore } from "../store/cartStore";
+// import { Plus, Minus } from "lucide-react";
 
 export const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const product = products.find(p => p.id === id);
-  const { addItem } = useCartStore();
+  const product = products.find((p) => p.id === id);
+  // const { addItem } = useCartStore();
 
   if (!product) {
     return <div className="text-center py-16">Product not found</div>;
@@ -43,7 +43,9 @@ export const ProductDetail: React.FC = () => {
         <div className="space-y-8">
           <div>
             <h1 className="text-3xl font-bold">{product.name}</h1>
-            <p className="text-2xl font-medium mt-2">${product.price.toFixed(2)}</p>
+            <p className="text-2xl font-medium mt-2">
+              ${product.price.toFixed(2)}
+            </p>
           </div>
 
           <p className="text-gray-600">{product.description}</p>
@@ -53,19 +55,21 @@ export const ProductDetail: React.FC = () => {
             <ul className="space-y-2">
               {product.features.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <Plus className="h-5 w-5 mr-2 flex-shrink-0" />
+                  {/* <Plus className="h-5 w-5 mr-2 flex-shrink-0" /> */}
                   <span>{feature}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <button
-            onClick={() => addItem(product)}
-            className="w-full btn py-3 text-base"
+          <a
+            href={product.pmntLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full btn py-3 text-base inline-block text-center"
           >
-            Add to Cart
-          </button>
+            Buy Now
+          </a>
         </div>
       </div>
     </div>

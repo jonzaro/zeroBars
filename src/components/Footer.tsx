@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-lg font-bold mb-4">Quick Links</h4>
             <ul className="text-sm space-y-2">
               <li>
-                <Link to="/home" className="hover:underline">
+                <Link to="/" className="hover:underline">
                   Home
                 </Link>
               </li>
@@ -27,7 +27,17 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:underline">
+                <Link to="/terms" className="hover:underline">
+                  Terms & Conditions{" "}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="https://docs.google.com/forms/d/e/1FAIpQLSdNls0PjXfs7SCOwwtjH_M3keIIq4ndws7tY7ZWUdrM1eKCoQ/viewform?usp=sharing"
+                  className="hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Contact Us
                 </Link>
               </li>

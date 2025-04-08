@@ -37,9 +37,9 @@ export const Home: React.FC = () => {
             [!!] TRANSMISSION:0324205v1 [!!]... **** EXCLUSIVE MONTHLY DROPS
             INITIATED... [ * ] DARK MODE LOADOUTS * COMING SOON! * STAY TUNED *{" "}
             <span className="text-xl inline">⚠️⚠️⚠️</span>
-            <Link to="/subscribe" className="text-gray-500 underline ml-2">
+            {/* <Link to="/subscribe" className="text-gray-500 underline ml-2">
               SUBSCRIBE TO BE UPDATED{" "}
-            </Link>
+            </Link> */}
           </span>
         </div>
       </div>
@@ -67,8 +67,10 @@ export const Home: React.FC = () => {
               No Signal. No Limits.
             </h2>
             <p className="text-black text-sm sm:text-base mb-4 opacity-80">
-              From EDC to weekend ops, these bags are your go-anywhere,
-              carry-everything solution. Urban tested, wilderness proven.
+              Your everyday grind demands gear that keeps up. Our tactical bags
+              are tough, versatile, and ready for anything life throws your way.
+              Pack it, strap it, own it—because staying ready isn’t a choice,
+              it’s a mindset.
             </p>
             <Link
               to="/products"

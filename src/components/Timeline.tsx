@@ -8,6 +8,7 @@ const timelineData = [
     date: "00293092 TRANSMISSION –",
     time: "03:49 PM",
     title: "COMMENT #03",
+    id: "sling-bag",
     img: Sling2,
 
     content:
@@ -17,6 +18,7 @@ const timelineData = [
     date: "LOGSTAT // 020930Z // RESTRICTED",
     time: "09:23 AM",
     title: "SUMMERY #02",
+    id: "pack",
     img: Backpack,
     content:
       "Our largest bag is here — built for long hauls, big days, and everything in between. It’s available now, ready to move when you are.",
@@ -69,12 +71,14 @@ export default function Timeline() {
               </p>
               {item.img && (
                 <div className="mt-2">
-                  <img
-                    src={item.img}
-                    alt={`${item.title} image`}
-                    className="rounded-lg w-full opacity-100"
-                    style={{ opacity: 1 }}
-                  />
+                  <a href={`/products/${item.id}`} className="block">
+                    <img
+                      src={item.img}
+                      alt={`${item.title} image`}
+                      className="rounded-lg w-full opacity-100 hover:opacity-90 transition-opacity"
+                      style={{ opacity: 1 }}
+                    />
+                  </a>
                 </div>
               )}
             </motion.div>
