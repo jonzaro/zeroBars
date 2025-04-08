@@ -16,21 +16,21 @@
 
 @font-face {
   font-family: "MyCustomFont";
-  src: url("/src/assets/font/Coolvetica\ Rg.otf") format("opentype");
+  src: url("./assets/font/Coolvetica Rg.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "MyCustomFont2";
-  src: url("src/assets/font/BebasNeue-Regular.ttf") format("truetype");
+  src: url("./assets/font/BebasNeue-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "MyCustomFont3";
-  src: url("src/assets/font/Abel-Regular.ttf") format("truetype");
+  src: url("./assets/font/Abel-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
