@@ -62,21 +62,21 @@ export const Home: React.FC = () => {
               />
             </div>
           </div>
-          <div className="backdrop-blur-md bg-white font-custom2 p-6 rounded-lg shadow-2xl mb-8 text-center flex flex-col items-center mx-auto max-w-md w-full sm:w-4/5 md:w-3/5 lg:w-2/5">
-            <h2 className="text-black text-xl sm:text-2xl lg:text-3xl font-bold mb-3">
+          <div className="backdrop-blur-md bg-white p-4 sm:p-6 rounded-lg shadow-2xl mb-4 sm:mb-8 text-center flex flex-col items-center mx-auto w-[95%] sm:w-4/5 md:w-3/5 lg:w-2/5">
+            <h2 className="text-black font-custom2 text-2xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3">
               No Signal. No Limits.
             </h2>
-            <p className="text-black text-sm sm:text-base mb-4 opacity-80">
+            <p className="text-black text-base sm:text-base mb-3 sm:mb-4 opacity-80">
               Your everyday grind demands gear that keeps up. Our tactical bags
               are tough, versatile, and ready for anything life throws your way.
-              Pack it, strap it, own it—because staying ready isn’t a choice,
-              it’s a mindset.
+              Pack it, strap it, own it—because staying ready isn't a choice,
+              it's a mindset.
             </p>
             <Link
               to="/products"
-              className="group relative inline-flex items-center justify-center px-8 py-3 bg-white text-black font-medium rounded-md overflow-hidden transition-all duration-300 hover:bg-gray-900 hover:text-white"
+              className="group relative inline-flex items-center justify-center px-8 py-3 text-lg bg-white text-black font-medium rounded-md overflow-hidden transition-all duration-300 hover:bg-gray-900 hover:text-white w-full sm:w-auto"
             >
-              <span className="relative z-10 flex items-center">
+              <span className="relative z-10 flex items-center justify-center">
                 Shop Now{" "}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </span>

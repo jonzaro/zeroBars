@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../data/products";
-import { useCartStore } from "../store/cartStore";
+// import { useCartStore } from "../store/cartStore";
 // import { Plus, Minus } from "lucide-react";
 
 export const ProductDetail: React.FC = () => {
