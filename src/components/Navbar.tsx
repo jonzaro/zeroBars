@@ -13,12 +13,12 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 bg-black bg-opacity-95 text-white z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="fixed pb-4 top-0 left-0 right-0 bg-black bg-opacity-95 text-2xl text-white z-50">
+        <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link
               to="/"
-              className="text-xl font-bold tracking-wider relative group overflow-hidden"
+              className="text-2xl font-bold tracking-wider relative group overflow-hidden"
             >
               <span className="inline-block font-custom2 transform transition-transform duration-300 group-hover:-translate-y-full">
                 ZERO BARS OUTPOST
@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
               </span>
             </Link>
 
-            <div className="hidden md:flex space-x-8">
+            <div className="flex space-x-4 md:space-x-8 font-custom2">
               {["Home", "Products"].map((item) => (
                 <Link
                   key={item}

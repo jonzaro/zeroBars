@@ -10,7 +10,7 @@ import { Terms } from "./pages/Terms";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-neutral-950">
         <Navbar />
         <main className="pt-16">
           <Routes>
@@ -24,7 +24,6 @@ function App() {
           </Routes>
         </main>
       </div>
-      1
     </Router>
   );
 }

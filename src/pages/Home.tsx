@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LogoVid from "../assets/AnimatedLogoVid.mp4";
-import MapImg from "../assets/MapGunBW.jpeg";
+import HeroBlackBig from "../assets/HeroBlackBig.png";
 import Footer from "../components/Footer";
 import Reviews from "../components/Reviews";
 import Timeline from "../components/Timeline";
@@ -9,9 +9,9 @@ import { ArrowRight } from "lucide-react";
 
 export const Home: React.FC = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <div className="bg-white w-full p-4 overflow-hidden relative">
+      <div className="bg-black w-full p-4 overflow-hidden relative">
         <div
           className="whitespace-nowrap w-full"
           style={{
@@ -33,7 +33,7 @@ export const Home: React.FC = () => {
         `}
           </style>
           <span className="text-xl inline">⚠️⚠️⚠️</span>{" "}
-          <span className="text-sm inline text-gray-800">
+          <span className="text-sm inline text-white">
             [!!] TRANSMISSION:0324205v1 [!!]... **** EXCLUSIVE MONTHLY DROPS
             INITIATED... [ * ] DARK MODE LOADOUTS * COMING SOON! * STAY TUNED *{" "}
             <span className="text-xl inline">⚠️⚠️⚠️</span>
@@ -43,30 +43,44 @@ export const Home: React.FC = () => {
           </span>
         </div>
       </div>
-      <div className="relative h-screen">
-        <img src={MapImg} alt="Hero" className="w-full h-full object-cover " />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col overflow-hidden">
-          <div className="rounded-lg overflow-hidden mx-auto w-full flex-shrink-0">
-            <div className="mt-2 mb-6 w-auto mx-auto px-4 lg:w-4/5 flex justify-center">
+
+      <div className="relative h-screen mb-10">
+        <img
+          src={HeroBlackBig}
+          alt="Hero"
+          className="w-full h-full object-cover"
+          style={{
+            maxHeight: "100vh",
+            objectPosition: "center top",
+          }}
+        />
+        <div className="absolute inset-0 bg-opacity-50 flex flex-col overflow-hidden">
+          <div className="rounded-lg overflow-hidden mx-auto w-[95%] sm:w-4/5 lg:w-4/5 flex-shrink-0">
+            <div className="mt-2 mb-6 w-full mx-auto px-4 flex justify-center">
               <video
                 src={LogoVid}
                 autoPlay
                 muted
                 playsInline
-                className="transform rounded-lg max-w-5xl object-cover w-full h-auto opacity-90"
+                className="transform rounded-lg max-w-5xl object-cover w-full mt-9 h-10vw opacity-70"
                 style={{
-                  maxWidth: "50vw",
+                  WebkitFilter: "invert(100%)",
+                  filter: "invert(100%)",
+                  maxWidth: "80vw",
                   zIndex: 10,
                   position: "relative",
                 }}
               />
             </div>
           </div>
-          <div className="backdrop-blur-md bg-white p-4 sm:p-6 rounded-lg shadow-2xl mb-4 sm:mb-8 text-center flex flex-col items-center mx-auto w-[95%] sm:w-4/5 md:w-3/5 lg:w-2/5">
-            <h2 className="text-black font-custom2 text-2xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3">
+          <div
+            className="opacity-70 backdrop-blur-md bg-black p-4 sm:p-6 rounded-lg shadow-2xl mb-4 sm:mb-8 text-center flex flex-col items-center mx-auto w-[95%] sm:w-4/5"
+            style={{ marginTop: "40vh" }}
+          >
+            <h2 className="text-white font-custom2 text-2xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3">
               No Signal. No Limits.
             </h2>
-            <p className="text-black text-base sm:text-base mb-3 sm:mb-4 opacity-80">
+            <p className="text-white text-base sm:text-base mb-3 sm:mb-4 opacity-80">
               Your everyday grind demands gear that keeps up. Our tactical bags
               are tough, versatile, and ready for anything life throws your way.
               Pack it, strap it, own it—because staying ready isn't a choice,
@@ -84,30 +98,38 @@ export const Home: React.FC = () => {
             </Link>
           </div>
           <div
-            className="flex-1 overflow-auto pb-4 scrollbar-hide md:pb-4 sm:max-h-[calc(100vh-400px)] max-h-[calc(100vh-300px)]"
+            className="flex-1 overflow-auto pb-4 scrollbar-hide md:pb-4"
             style={{
               scrollbarWidth: "none" /* Firefox */,
               msOverflowStyle: "none" /* IE and Edge */,
+              marginTop: "40vh" /* Push the timeline down 100vh */,
+              position: "relative",
             }}
           >
             <style>{`
-              .scrollbar-hide::-webkit-scrollbar {
-              display: none;
-              }
-              @media (max-width: 640px) {
-              .timeline-container {
-                height: auto;
-                flex: 1;
-              }
-              }
-            `}</style>
-            <Timeline />
+          .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+          }
+          @media (max-width: 640px) {
+          .timeline-container {
+            height: auto;
+            flex: 1;
+          }
+          }
+        `}</style>
           </div>
         </div>
       </div>
 
+      {/* Timeline section */}
+      <div className="w-full">
+        <Timeline />
+      </div>
+
       {/* Featured Section */}
-      <Reviews />
+      <div className="w-full">
+        <Reviews />
+      </div>
 
       <Footer />
     </div>

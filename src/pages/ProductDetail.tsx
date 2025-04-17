@@ -10,14 +10,16 @@ export const ProductDetail: React.FC = () => {
   // const { addItem } = useCartStore();
 
   if (!product) {
-    return <div className="text-center py-16">Product not found</div>;
+    return (
+      <div className="text-center py-16 text-gray-300">Product not found</div>
+    );
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-stone-900 text-gray-200">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="space-y-4">
-          <div className="aspect-square overflow-hidden bg-gray-100">
+          <div className="aspect-square overflow-hidden bg-gray-800">
             <img
               src={product.images[0]}
               alt={product.name}
@@ -28,7 +30,7 @@ export const ProductDetail: React.FC = () => {
             {product.images.map((image, index) => (
               <button
                 key={index}
-                className="aspect-square overflow-hidden bg-gray-100"
+                className="aspect-square overflow-hidden bg-gray-800 border border-gray-700"
               >
                 <img
                   src={image}
@@ -42,19 +44,19 @@ export const ProductDetail: React.FC = () => {
 
         <div className="space-y-8">
           <div>
-            <h1 className="text-3xl font-bold">{product.name}</h1>
-            <p className="text-2xl font-medium mt-2">
+            <h1 className="text-3xl font-bold text-gray-100">{product.name}</h1>
+            <p className="text-2xl font-medium mt-2 text-gray-200">
               ${product.price.toFixed(2)}
             </p>
           </div>
 
-          <p className="text-gray-600">{product.description}</p>
+          <p className="text-gray-400">{product.description}</p>
 
           <div>
-            <h2 className="text-lg font-medium mb-4">Features</h2>
+            <h2 className="text-lg font-medium mb-4 text-gray-100">Features</h2>
             <ul className="space-y-2">
               {product.features.map((feature, index) => (
-                <li key={index} className="flex items-start">
+                <li key={index} className="flex items-start text-gray-300">
                   {/* <Plus className="h-5 w-5 mr-2 flex-shrink-0" /> */}
                   <span>{feature}</span>
                 </li>
@@ -64,9 +66,8 @@ export const ProductDetail: React.FC = () => {
 
           <a
             href={product.pmntLink}
-            target="_blank"
+            className="w-full btn py-3 text-base inline-block text-center bg-black hover:bg-gray-600 text-white"
             rel="noopener noreferrer"
-            className="w-full btn py-3 text-base inline-block text-center"
           >
             Buy Now
           </a>

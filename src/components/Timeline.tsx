@@ -21,7 +21,7 @@ const timelineData = [
     id: "pack",
     img: Backpack,
     content:
-      "Our largest bag is here — built for long hauls, big days, and everything in between. It’s available now, ready to move when you are.",
+      "Our largest bag is here — built for long hauls, big days, and everything in between. It's available now, ready to move when you are.",
   },
   {
     date: "REDCON 1 // 300500Z MAR 25 –",
@@ -34,8 +34,8 @@ const timelineData = [
 
 export default function Timeline() {
   return (
-    <div className="flex justify-center py-3 px-4 rounded-xl w-full md:w-auto mx-auto max-w-4xl bg-gray-200/90 relative">
-      <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-white rounded-full"></div>
+    <div className="flex justify-center py-3 px-4 rounded-xl w-full md:w-auto mx-auto max-w-4xl bg-neutral-900">
+      <div className="absolute left-[200px] bottom-0 w-1 bg-stone-800-900 rounded-full"></div>
 
       <div className="flex flex-col items-center space-y-10 w-2/3 relative max-w-full">
         {timelineData.map((item, index) => (
@@ -47,26 +47,26 @@ export default function Timeline() {
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             <div className="w-full rounded-md md:w-1/3 sm:text-xl text-center md:text-right pr-0 md:pr-4 mb-2 md:mb-0 p-3">
-              <p className="text-gray-500 text-xs sm:text-lg font-bold transform -translate-x-1/3">
+              <p className="text-white text-xs sm:text-lg font-bold transform -translate-x-1/3">
                 {item.date}
               </p>
-              <p className="text-gray-400 text-xs sm:text-md transform -translate-x-1/3">
+              <p className="text-slate-300 text-xs sm:text-md transform -translate-x-1/3">
                 {item.time}
               </p>
             </div>
-            <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center z-10 my-2 md:my-0">
-              <FaCrosshairs className="text-black text-md" />
+            <div className="w-6 h-6 bg-stone-200 rounded-full flex items-center justify-center z-10 my-2 md:my-0">
+              <FaCrosshairs className="text-white text-md" />
             </div>
             <motion.div
-              className="w-full md:w-2/3 bg-white p-3 sm:p-4 rounded-xl shadow-lg md:ml-4 mt-2 md:mt-0"
+              className="w-full md:w-2/3 bg-stone-800 p-3 sm:p-4 rounded-xl shadow-lg md:ml-4 mt-2 md:mt-0"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}
             >
-              <p className="font-bold font-custom2 text-xl lg:text-lg">
+              <p className="font-bold font-custom2 text-xl lg:text-lg text-white">
                 {item.title}
               </p>
-              <p className="text-gray-700 font-semibold font-custom3 text-xl lg:text-sm">
+              <p className="text-slate-200 font-semibold font-custom3 text-xl lg:text-sm">
                 {item.content}
               </p>
               {item.img && (

@@ -41,7 +41,7 @@ const Reviews: React.FC = () => {
         {reviews.map((review) => (
           <div
             key={review.id}
-            className="bg-white shadow-md rounded-lg p-4 border border-gray-200 transition-transform duration-300 ease-in-out hover:scale-105 w-full md:w-[calc(33%-1rem)] flex-grow"
+            className="bg-neutral-200 shadow-md rounded-lg p-4 border border-gray-200 transition-transform duration-300 ease-in-out hover:scale-105 w-full md:w-[calc(33%-1rem)] flex-grow"
           >
             <h3 className="text-lg font-semibold mb-2">{review.name}</h3>
             <p className="text-gray-600 text-sm mb-4">{review.reviewText}</p>
@@ -51,7 +51,7 @@ const Reviews: React.FC = () => {
             </div>
           </div>
         ))}
-        <div className="col-span-3 mt-4 flex flex-wrap justify-between items-center w-full max-w-xl mx-auto px-4 gap-2">
+        <div className=" bg-neutral-200 rounded-md col-span-3 mt-4 flex flex-wrap justify-between items-center w-full max-w-xl mx-auto px-4 gap-2">
           <img
             src={McAfeeImg}
             alt="McAfee SECURE"
