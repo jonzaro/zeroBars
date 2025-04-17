@@ -25,7 +25,7 @@ export const products: Product[] = [
     id: "fanny",
     name: "Blackout Fanny",
     price: 40,
-    pmntLink: "https://buy.stripe.com/cN2dRf1bN21AgjC4gg",
+    pmntLink: "https://buy.stripe.com/9AQ28x6w7bCa6J2bIL",
     description:
       "Technical waist pack with expandable storage and multi-wear options.",
     images: [FannyImage, FannyImage],
